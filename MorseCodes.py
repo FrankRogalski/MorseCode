@@ -81,3 +81,19 @@ def search_codes_morse_for_binary(search_term):
         if codes[k].code == search_term:
             return codes[k].binary
     return ""
+
+def search_codes_binary_for_text(search_term):
+    if type(search_term) != "string":
+        return ""
+    for k in codes:
+        if codes[k].binary == search_term:
+            return k
+    return ""
+
+def search_codes_binary_for_morse(search_term):
+    if type(search_term) != "string":
+        return ""
+    for k in codes:
+        if codes[k].binary == search_term:
+            return codes[k].code
+    return ""
